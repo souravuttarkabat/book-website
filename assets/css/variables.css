@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+--bg:#F7F2EB;
+--surface:#ffffff;
+--text:#171717;
+--muted:#666666;
+--accent:#C84B31;
+--accent-dark:#A53C2A;
+--border:#E5D8CC;
+--shadow:0 15px 40px rgba(0,0,0,.08);
+}
