@@ -8,9 +8,11 @@ const BOOK_DATABASE = {
     subtitle: "Revisiting Foundations of Faith",
     edition: "First Edition",
     version: "1.0",
-    pages: "214",
+    pages: 214,
     filesize: "2.25 MB",
-    releaseDate: "2026-06-26"
+    releaseDate: "2026-06-26",
+    publisher: "Independent Publication",
+    lastUpdated: "2026-06-26"
 };
 
 document.addEventListener("DOMContentLoaded", () => {

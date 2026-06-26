@@ -1,0 +1,15 @@
+{
+  "name": "Perfect Answers, Perfect Questions",
+  "short_name": "Perfect Answers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f2eb",
+  "theme_color": "#c84b31",
+  "icons": [
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
