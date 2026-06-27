@@ -2,12 +2,10 @@
    TABLET (max-width: 1024px)
 ===================================================== */
 @media (max-width: 1024px) {
-    /* Global Section */
     section {
         padding: 70px 32px;
     }
 
-    /* Hero */
     .hero-container {
         flex-direction: column;
         text-align: center;
@@ -30,7 +28,6 @@
         justify-content: center;
     }
 
-    /* Book at a Glance */
     .glance-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -40,12 +37,10 @@
    MOBILE (max-width: 768px)
 ===================================================== */
 @media (max-width: 768px) {
-    /* Global Section - Made more native */
     section {
         padding: 60px 22px;
     }
 
-    /* Navigation */
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -78,60 +73,42 @@
         font-size: 0.95rem;
     }
 
-    /* Hero */
     #hero {
-        /* Prevents the fixed navbar from overlapping the top of the hero on mobile */
         padding-top: 160px;
         padding-bottom: 60px;
     }
     .hero-container {
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        gap:26px;
-        width:100%;
-        max-width:100%;
+        gap: 32px;
     }
-    .hero-image{
-        width:100%;
-        max-width:none;
+    .hero-image {
+        order: 1;
+        max-width: 240px;
     }
-
-    .hero-image img{
-        width:min(82vw,320px);
-        max-width:320px;
+    .hero-image img {
+        max-width: 220px;
+        margin: auto;
     }
-    .hero-text{
-    order:2;
-    width:100%;
-    max-width:340px;
-    margin:auto;
-    padding:0;
-    text-align:center;
-    align-items:center;
-}
+    .hero-text {
+        order: 2;
+        max-width: 100%;
+    }
     .hero-text h1 {
-        font-size:2.3rem;
-        letter-spacing:-1px;
+        font-size: clamp(2.5rem, 8vw, 3.2rem);
+        line-height: 1.12;
     }
     .hero-text h2 {
         font-size: clamp(1.1rem, 4vw, 1.45rem);
     }
-    .hero-journey{
-    text-align:center;
-    font-size:.9rem;
-}
-    .hero-author{
-    text-align:center;
-    font-size:.95rem;
-}
-    .hero-description{
-    font-size:.98rem;
-    line-height:1.8;
-    max-width:300px;
-}
-}
+    .hero-journey {
+        font-size: clamp(0.85rem, 3vw, 1rem);
+    }
+    .hero-author {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+    .hero-description {
+        font-size: clamp(1rem, 3vw, 1.18rem);
+        line-height: 1.7;
+    }
     .hero-buttons {
         flex-direction: column;
         gap: 16px;
@@ -145,13 +122,11 @@
         font-size: clamp(0.75rem, 2vw, 0.85rem);
     }
 
-    /* Global Section Titles */
     .section-title h2 {
         font-size: clamp(2rem, 7vw, 2.5rem);
         line-height: 1.15;
     }
 
-    /* Quote */
     #quote {
         padding: 30px 20px;
     }
@@ -162,7 +137,6 @@
         margin: auto;
     }
 
-    /* Before You Read */
     .reflection-box {
         padding: 35px 24px;
     }
@@ -170,13 +144,11 @@
         font-size: 1.5rem;
     }
 
-    /* Reader Cards */
     .reader-grid {
         grid-template-columns: 1fr;
         gap: 18px;
     }
 
-    /* About Book */
     .about-layout {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -192,7 +164,6 @@
         order: 1;
     }
 
-    /* Book at a Glance */
     .glance-grid {
         grid-template-columns: 1fr;
     }
@@ -200,7 +171,6 @@
         height: 100%;
     }
 
-    /* Read Online */
     .platforms {
         grid-template-columns: 1fr;
         gap: 22px;
@@ -209,7 +179,6 @@
         padding: 22px;
     }
 
-    /* Download Page Layout */
     .book-info-layout {
         flex-direction: column;
         align-items: center;
@@ -224,7 +193,6 @@
         width: 100%;
     }
     
-    /* Force Download Metadata to Stack Vertically on Phones */
     .download-meta div {
         display: flex;
         flex-direction: column;
@@ -252,18 +220,25 @@
         max-width: 180px;
     }
 
-    /* Author Section */
-    #author{
-        padding:60px 22px;
+    #author {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+    #author p {
+        font-size: 1rem;
+        line-height: 1.8;
     }
 
-    /* Footer */
     footer {
         padding: 40px 20px;
         text-align: center;
     }
 
-    /* Mobile Whitespace Fixes (Larger native gaps) */
     #hero,
     #download-hero,
     #about,
@@ -272,7 +247,6 @@
         margin-bottom: 60px;
     }
 
-    /* Buttons global mobile */
     .hero-primary,
     .hero-secondary,
     .download-button,
@@ -283,18 +257,11 @@
         font-size: 1rem;
         text-align: center;
         justify-content: center;
-    }}
+    }
+}
 
-/* Global Images Safety */
 img {
     max-width: 100%;
     height: auto;
     display: block;
-}
-/* mobile overrides */
-@media (max-width:768px){
-.about-layout{display:flex;flex-direction:column;}
-.reader-grid{grid-template-columns:1fr;}
-.platforms{grid-template-columns:1fr;}
-.glance-grid{grid-template-columns:1fr;}
 }

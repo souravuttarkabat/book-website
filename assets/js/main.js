@@ -1,57 +1,54 @@
 /* =====================================================
-   PERFECT ANSWERS, PERFECT QUESTIONS
-   Interactive Feature Controllers
+   INTERACTIONS & UI LOGIC
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // -------------------------------------------------
-    // 1. Table of Contents Slide Toggle
-    // -------------------------------------------------
+    // Smooth Scrolling for Hash Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Table of Contents Toggle (Download Page)
     const tocToggle = document.getElementById("tocToggle");
     const tocContent = document.getElementById("tocContent");
-
+    
     if (tocToggle && tocContent) {
         tocToggle.addEventListener("click", () => {
-            const isOpened = tocContent.classList.contains("open");
+            tocContent.classList.toggle("open");
+            tocToggle.classList.toggle("active");
             
-            if (isOpened) {
-                // Close interaction
-                tocContent.classList.remove("open");
-                tocToggle.classList.remove("active");
-                tocToggle.setAttribute("aria-expanded", "false");
-            } else {
-                // Open interaction
-                tocContent.classList.add("open");
-                tocToggle.classList.add("active");
-                tocToggle.setAttribute("aria-expanded", "true");
-            }
+            const isExpanded = tocContent.classList.contains("open");
+            tocToggle.setAttribute("aria-expanded", isExpanded);
         });
     }
 
-    // -------------------------------------------------
-    // 2. Download Gateway Gatekeeper Validation
-    // -------------------------------------------------
+    // Agreement Checkbox Logic (Download Page)
     const agreementCheckbox = document.getElementById("downloadAgreement");
     const downloadButton = document.getElementById("downloadButton");
-
+    
     if (agreementCheckbox && downloadButton) {
-        agreementCheckbox.addEventListener("change", (event) => {
-            if (event.target.checked) {
-                // Activate the download engine link
+        agreementCheckbox.addEventListener("change", (e) => {
+            if (e.target.checked) {
                 downloadButton.classList.remove("disabled");
-                downloadButton.removeAttribute("tabindex");
             } else {
-                // Restrict interactions if agreement is unchecked
                 downloadButton.classList.add("disabled");
-                downloadButton.setAttribute("tabindex", "-1");
             }
         });
 
-        // Intercept click sequences if users bypass CSS states via keyboard mapping
-        downloadButton.addEventListener("click", (event) => {
+        downloadButton.addEventListener("click", (e) => {
             if (downloadButton.classList.contains("disabled")) {
-                event.preventDefault();
+                e.preventDefault();
             }
         });
     }

@@ -16,7 +16,6 @@ const BOOK_DATABASE = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Inject centralized metadata values wherever target hooks are declared
     document.querySelectorAll("[data-book-title]").forEach(el => {
         if (el.tagName !== "IMG") el.innerText = BOOK_DATABASE.title;
     });
