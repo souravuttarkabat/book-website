@@ -49,3 +49,14 @@ body {
     width:min(1120px,90%);
     margin:0 auto;
 }
+
+/* ==========================================
+   ACCESSIBILITY (Keyboard Focus)
+========================================== */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+}

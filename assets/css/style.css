@@ -21,21 +21,30 @@ padding-bottom:40px;
 }
 
 #book-information{
-padding-top:30px;
-padding-bottom:40px;
+padding-top:15px;
+padding-bottom:20px;
 }
 
 #table-of-contents{
-padding-top:40px;
-padding-bottom:40px;
+padding-top:20px;
+padding-bottom:20px;
 }
 
 #download-agreement{
-padding-top:40px;
-padding-bottom:40px;
+padding-top:20px;
+padding-bottom:20px;
 }
 
 #download-action{
 padding-top:20px;
 padding-bottom:50px;
+}
+/* Privacy Page Container */
+.privacy-container {
+    padding-top: 140px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    min-height: 75vh;
 }

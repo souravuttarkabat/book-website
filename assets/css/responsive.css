@@ -224,9 +224,9 @@
         width: 100%;
         height: auto;
         margin-left: 0;
-        padding-left: 0;
-        padding-right: 0;
-        overflow: visible;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow: hidden;
         box-sizing: border-box;
     }
     #author p {
@@ -264,4 +264,64 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* =====================================================
+   PHASE 3: MOBILE RESCUE (Strict Constraints)
+===================================================== */
+@media (max-width: 768px) {
+    /* 1. Global Overflow Fix (Stops the Shrunk PC View) */
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    img, .platform-card, .reflection-box, .book-highlight {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Constrains the 390px book cover so it fits tiny screens */
+    .hero-image img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* 2. Reordering the Reflection Box */
+    /* 2. Reordering the Core Question Box */
+    .about-layout {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-content {
+        order: 1;
+    }
+    .book-highlight {
+        order: 2;
+        margin-top: 20px;
+        padding: 30px 25px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 3. Shrinking 'Book at a Glance' Cards */
+    .glance-item {
+        padding: 20px;
+    }
+
+    /* 4. Download Page Spacing Optimization */
+    .section-title {
+        margin-bottom: 25px; /* Reduced by 50% from 50px */
+    }
+    
+    #download-hero {
+        padding-top: 90px; /* Reduced top gap above book cover */
+    }
+
+    /* 5. Privacy Policy Nav Overlap Fix */
+    /* 5. Privacy Policy Nav Overlap Fix */
+    .privacy-container {
+        padding-top: 200px; /* Safely clears the stacked mobile navbar */
+    }
 }

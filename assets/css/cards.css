@@ -130,8 +130,8 @@ text-transform:uppercase;
 .download-meta{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:20px;
-margin:35px 0;
+gap:12px 40px;
+margin:25px 0;
 }
 
 .download-meta div{
@@ -263,13 +263,17 @@ margin-top:35px;
 }
 
 .toc-content{
-max-height:0;
-overflow:hidden;
-transition:max-height .5s ease;
+display: grid;
+grid-template-rows: 0fr;
+transition: grid-template-rows .5s ease;
+}
+
+.toc-content > * {
+overflow: hidden;
 }
 
 .toc-content.open{
-max-height:3000px;
+grid-template-rows: 1fr;
 }
 
 /* ==========================================
@@ -354,3 +358,4 @@ transition:.35s;
 .toc-toggle.active .toc-arrow{
 transform:rotate(180deg);
 }
+

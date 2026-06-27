@@ -34,15 +34,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Agreement Checkbox Logic (Download Page)
+    // Agreement Checkbox Logic (Download Page)
     const agreementCheckbox = document.getElementById("downloadAgreement");
     const downloadButton = document.getElementById("downloadButton");
     
     if (agreementCheckbox && downloadButton) {
+        // Secure the link by temporarily removing it
+        const fileLink = downloadButton.getAttribute("href");
+        downloadButton.removeAttribute("href");
+
         agreementCheckbox.addEventListener("change", (e) => {
             if (e.target.checked) {
                 downloadButton.classList.remove("disabled");
+                downloadButton.setAttribute("href", fileLink); // Restore link
             } else {
                 downloadButton.classList.add("disabled");
+                downloadButton.removeAttribute("href"); // Remove link again
             }
         });
 
