@@ -12,30 +12,30 @@
 @import url("footer.css");
 @import url("responsive.css");
 
-section {
-    padding: 70px 25px;
+section{
+padding:70px 25px;
 }
 
-#download-hero {
-    padding-bottom: 40px;
+#download-hero{
+padding-bottom:40px;
 }
 
-#book-information {
-    padding-top: 30px;
-    padding-bottom: 40px;
+#book-information{
+padding-top:30px;
+padding-bottom:40px;
 }
 
-#table-of-contents {
-    padding-top: 40px;
-    padding-bottom: 40px;
+#table-of-contents{
+padding-top:40px;
+padding-bottom:40px;
 }
 
-#download-agreement {
-    padding-top: 40px;
-    padding-bottom: 40px;
+#download-agreement{
+padding-top:40px;
+padding-bottom:40px;
 }
 
-#download-action {
-    padding-top: 20px;
-    padding-bottom: 50px;
+#download-action{
+padding-top:20px;
+padding-bottom:50px;
 }
