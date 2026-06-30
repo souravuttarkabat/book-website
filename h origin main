@@ -1,0 +1,12 @@
+[33m432e1ad[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m updateV1.1
+[33ma24a714[m[33m ([m[1;31morigin/master[m[33m)[m Added distinct international and regional Kindle store routing options
+[33med69355[m Swapped regional amzn.in link for global amazon.com link
+[33mc049308[m Enabled live Amazon Kindle links on UI
+[33m9756001[m fix verification file content
+[33m8bf037c[m fix favicon case-sensitivity and space issues
+[33m444e589[m Launch ready build
+[33m7d9cb45[m[33m ([m[1;33mtag: [m[1;33mclean-final-v1[m[33m)[m clean-final
+[33mbfbf09f[m[33m ([m[1;33mtag: [m[1;33mfinallygot-v1[m[33m)[m finallygot
+[33m6668022[m[33m ([m[1;33mtag: [m[1;33mv1.1-stable[m[33m)[m v1.1 - restored stable website after rollback
+[33m9f1abca[m before-responsive-rebuild
+[33m3d0d553[m v1.0-ui-freeze
