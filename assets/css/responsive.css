@@ -165,7 +165,8 @@
     }
 
     .glance-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
     }
     .glance-item {
         height: 100%;
@@ -305,9 +306,24 @@ img {
         box-sizing: border-box;
     }
 
-    /* 3. Shrinking 'Book at a Glance' Cards */
+    /* 3. Shrinking 'Book at a Glance' Cards and optimizing 3-Column readability */
     .glance-item {
-        padding: 20px;
+        padding: 12px 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .glance-item .label {
+        font-size: 0.68rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+    }
+    .glance-item .value {
+        font-size: 0.82rem;
+        line-height: 1.2;
+        word-break: break-word;
     }
 
     /* 4. Download Page Spacing Optimization */
